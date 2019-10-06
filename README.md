@@ -4,8 +4,11 @@ Installation
 You can install and run with NPM. All you have to do is open your terminal and type the following commands:
 
 $ git clone https://github.com/Sinuhem23/Node-Guessing-Game.git
+
 $ cd Node-Guessing-Game
+
 $ npm install
+
 Then, start the game with:
 
 $ node index.js
