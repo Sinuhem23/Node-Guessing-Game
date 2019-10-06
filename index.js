@@ -53,8 +53,8 @@ function main() {
             name: 'guess',
             prefix: '',
             message: '\nWord: ' + chalk.green(correctWord.update()) +
-            '\n\nGuesses left: ' + chalk.cyan.bold(remainingGuesses) +
-            '\nIncorrect guesses so far: ' + chalk.cyan.bold(guessSoFar.join('')) + '\n' + 'Guess a letter:'
+            chalk.blue('\n\nGuesses left: ') + chalk.cyan.bold(remainingGuesses) +
+            chalk.cyan('\nIncorrect guesses so far: ') + chalk.cyan.bold(guessSoFar.join('')) + '\n' + 'Guess a letter:'
         }
     ]).then(function (data){
         // users input
