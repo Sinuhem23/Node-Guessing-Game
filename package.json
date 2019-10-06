@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Sinuhem23/Node-Guessing-Game/issues"
   },
-  "homepage": "https://github.com/Sinuhem23/Node-Guessing-Game#readme"
+  "homepage": "https://github.com/Sinuhem23/Node-Guessing-Game#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "inquirer": "^7.0.0"
+  }
 }

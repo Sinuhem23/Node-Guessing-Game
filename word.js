@@ -1,6 +1,6 @@
 var Letter = require("./letter");
 
-function Word(correct) {
+function Word(correctWord) {
     this.correctWord = correctWord;
     this.letters = [];
 
@@ -8,7 +8,7 @@ function Word(correct) {
         var correctWordArray = this.correctWord.split('');
         for (var i = 0; i < correctWordArray.length; i++){
             var newLetter = new Letter(correctWordArray[i]);
-            history.letters.push(newLetter);
+            this.letters.push(newLetter);
         };
     };
     this.makeAguess = function(guess) {
