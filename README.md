@@ -24,8 +24,8 @@ After selecting a letter,
 
 * If guessed correct, your span of 9 guesses will remain and the correct letter will be displayed by "Word".
 
-If all words are guessed before reaching 0 guesses left, then you win! Otherwise you lose and the correct word will be displayed.
+* If all words are guessed before reaching 0 guesses left, then you win! Otherwise you lose and the correct word will be displayed.
 
-There is a prompt to play again which you can simply decide with a y for yes or n for no(and/or type yes, no).
+* There is a prompt to play again which you can simply decide with a y for yes or n for no(and/or type yes, no).
 
 * Also, if more than one letter is typed, you will be notified as well as if letter is repeated and/or nothing is entered.
