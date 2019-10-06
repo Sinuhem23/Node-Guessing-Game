@@ -10,7 +10,7 @@ correctWord.generateLetters();
 var remainingGuesses = 9;
 var guessSoFar = [];
 
-console.log(chalk.green.underline('\nReady to GUESS!?!'));
+console.log(chalk.green.underline('\nReady to GUESS!?!\n'));
 console.log(chalk.yellow("hint:") + 'Revolves around ancient times on the biggest continent!');
 
 
