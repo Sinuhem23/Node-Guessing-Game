@@ -10,7 +10,7 @@ correctWord.generateLetters();
 var remainingGuesses = 9;
 var guessSoFar = [];
 
-console.log(chalk.green('\nReady to GUESS!?!'));
+console.log(chalk.green.underline('\nReady to GUESS!?!'));
 console.log(chalk.yellow("hint:") + 'Revolves around ancient times on the biggest continent!');
 
 
@@ -18,10 +18,10 @@ console.log(chalk.yellow("hint:") + 'Revolves around ancient times on the bigges
 function endGame(outcome) {
 if(outcome === 'win'){
     console.log(chalk.cyanBright.bold('\nYOU WON!'));
-    console.log(chalk.magenta('You Guessed ' + chalk.blueBright.bold(correctWord.correctWord.toUpperCase()) + '' + chalk.bgRed.white('with' + (remainingGuesses) + ' guesses remaining.') + '\n')
+    console.log(chalk.magenta('You Guessed ' + chalk.blueBright.bold(correctWord.correctWord.toUpperCase()) + '' + '\n' + chalk.bgGreen.black('with ' + (remainingGuesses) + ' guesses remaining.') + '\n')
     )
 }else{
-    console.log('\n' + chalk.bgwhite.redBright.bold('You Lost'));
+    console.log('\n' + chalk.magenta.bold('You Lost'));
     console.log(chalk.blue('The correct word was: ') + chalk.bgYellow.black(correctWord.correctWord + '.') + '\n');
 };
 correctWord = new Word(words[Math.floor(Math.random() * words.length)]);
@@ -59,14 +59,14 @@ function main() {
     ]).then(function (data){
         // users input
         if(data.guess === ''){
-            console.log(chalk.bgOrange.white('oHoH!') + chalk.yellowBright('You did not enter a letter'));
+            console.log(chalk.bgRed.white.bold('oHoH!') + chalk.yellowBright('You did not enter a letter'));
             return main();
 
         }else if (data.guess.length > 1) {
-            console.log(chalk.bgOrange.white('\noHOH!') + chalk.yellowBright('Please guess one letter at a time.'));
+            console.log(chalk.bgRed.white.bold('\noHoH!') + chalk.yellowBright('Please guess one letter at a time.'));
             return main();
         }else if (guessSoFar.includes(data.guess)){
-           console.log(chalk.bgOrange/white('\noHoH!') + chalk.yellowBright('You have already guessed that, guess again'));
+           console.log(chalk.bgRed.white.bold('\noHoH!') + chalk.yellowBright('You have already guessed that, guess again'));
            return main(); 
         };
          // Only decrement guessesRemaining on an incorrect guess
