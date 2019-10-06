@@ -29,3 +29,17 @@ After selecting a letter,
 * There is a prompt to play again which you can simply decide with a y for yes or n for no(and/or type yes, no).
 
 * Also, if more than one letter is typed, you will be notified as well as if letter is repeated and/or nothing is entered.
+
+[GoogleDrive]
+
+Start screen
+(https://drive.google.com/open?id=173PyllCfip4FtoYAjy3HnqMiyXYDnECA)
+
+Prompts
+(https://drive.google.com/open?id=1UnYRwdV6dFU0decJg6EKVudeiN-_0YXO)
+
+Won
+(https://drive.google.com/open?id=1PqvJZdieydHGDXJdfdTGTKeRWm6rPopx)
+
+Loss
+(https://drive.google.com/open?id=12lSTwzAProjjkOAWm1Ejh8wq7RzW_AM2)
