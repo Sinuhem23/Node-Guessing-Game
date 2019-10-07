@@ -8,7 +8,8 @@ var correctWord = new Word(words[Math.floor(Math.random() * words.length)]);
 correctWord.generateLetters();
 
 var remainingGuesses = 9;
-var guessSoFar = [];
+var guessSoFar = [];// should be wrong guesses
+var gotRight = [];
 
 console.log(chalk.green.underline('\nReady to GUESS!?!\n'));
 console.log(chalk.yellow("hint:") + 'Revolves around ancient times on the biggest continent!');
@@ -28,6 +29,9 @@ correctWord = new Word(words[Math.floor(Math.random() * words.length)]);
 correctWord.generateLetters();
 remainingGuesses = 9;
 guessSoFar = [];
+gotRight = [];
+
+
 
 inquirer.prompt([
     {
@@ -54,7 +58,13 @@ function main() {
             prefix: '',
             message: '\nWord: ' + chalk.green(correctWord.update()) +
             chalk.blue('\n\nGuesses left: ') + chalk.cyan.bold(remainingGuesses) +
-            chalk.cyan('\nIncorrect guesses so far: ') + chalk.cyan.bold(guessSoFar.join('')) + '\n' + 'Guess a letter:'
+            chalk.cyan('\nGuesses so far: ') + 
+            chalk.cyan.bold(guessSoFar.join('')) + '\n' + 'Correct guesses:' +
+            chalk.cyan.bold(gotRight.join('')) + '\n' + 'Guess a letter:' 
+           
+
+
+
         }
     ]).then(function (data){
         // users input
@@ -74,6 +84,12 @@ function main() {
         remainingGuesses--;
     }
     guessSoFar.push(data.guess);
+    // var match = correctWord.correctWord.letter = data.guess;
+    if (correctWord.correctWord.includes(data.guess)){
+        console.log(chalk.bgWhite.cyan.bold('\nNICE!'));
+        gotRight.push(data.guess);
+    
+    }   
 
     for (var i=0; i < correctWord.letters.length; i++) {
         correctWord.letters[i].check(data.guess);

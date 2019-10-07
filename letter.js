@@ -9,7 +9,11 @@ this.returnCharacter = function() {
     if (this.guessedRight){
         return this.character;
     }else {
-        return "_";
+      
+            p = '_';
+            // s = p.split(' ');
+        
+        return  p;
     };
 };
 //  A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
