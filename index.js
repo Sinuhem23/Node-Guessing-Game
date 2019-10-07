@@ -11,6 +11,7 @@ var remainingGuesses = 9;
 var guessSoFar = [];
 var gotRight = [];
 
+
 console.log(chalk.green.underline('\nReady to GUESS!?!\n'));
 console.log(chalk.yellow("hint:") + 'Revolves around ancient times on the biggest continent!');
 
@@ -82,6 +83,8 @@ function main() {
          // Only decrement guessesRemaining on an incorrect guess
     if (!correctWord.correctWord.includes(data.guess)) {
         remainingGuesses--;
+    console.log(chalk.bgWhite.red.bold('\nWrong!'));
+
     }
  // Correct guesses
  if (correctWord.correctWord.includes(data.guess)){
