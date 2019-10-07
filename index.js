@@ -56,10 +56,10 @@ function main() {
         {
             name: 'guess',
             prefix: '',
-            message: '\nWord: ' + chalk.green(correctWord.update()) +
-            chalk.blue('\n\nGuesses left: ') + chalk.cyan.bold(remainingGuesses) +
-            chalk.cyan('\nGuesses so far: ') + 
-            chalk.cyan.bold(guessSoFar.join('')) + '\n' + 'Correct guesses:' +
+            message: chalk.magenta('\nWord: ') + chalk.green(correctWord.update()) +
+            chalk.blue('\n\nGuesses left: ') + (remainingGuesses) +
+            chalk.yellow('\nGuesses so far: ') + 
+            (guessSoFar.join('')) + '\n' + chalk.cyan('Correct guesses:') +
             chalk.cyan.bold(gotRight.join('')) + '\n' + 'Guess a letter:' 
            
 
@@ -83,13 +83,15 @@ function main() {
     if (!correctWord.correctWord.includes(data.guess)) {
         remainingGuesses--;
     }
+ // Correct guesses
+ if (correctWord.correctWord.includes(data.guess)){
+    console.log(chalk.bgWhite.cyan.bold('\nNICE!'));
+    gotRight.push(data.guess);
+
+}
+
     guessSoFar.push(data.guess);
-    // var match = correctWord.correctWord.letter = data.guess;
-    if (correctWord.correctWord.includes(data.guess)){
-        console.log(chalk.bgWhite.cyan.bold('\nNICE!'));
-        gotRight.push(data.guess);
-    
-    }   
+      
 
     for (var i=0; i < correctWord.letters.length; i++) {
         correctWord.letters[i].check(data.guess);
