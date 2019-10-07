@@ -8,7 +8,7 @@ var correctWord = new Word(words[Math.floor(Math.random() * words.length)]);
 correctWord.generateLetters();
 
 var remainingGuesses = 9;
-var guessSoFar = [];// should be wrong guesses
+var guessSoFar = [];
 var gotRight = [];
 
 console.log(chalk.green.underline('\nReady to GUESS!?!\n'));
